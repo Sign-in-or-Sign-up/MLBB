@@ -1,0 +1,8 @@
+#作者✍️SigninorSignup。
+#只支持Loon，禁止任何复制备份&修改及挪作他用。
+#更新日期2024年10月15日
+#登陆域名
+
+AND,((DOMAIN,login.ml.youngjoygame.com),(DEST-PORT,30021))
+AND,((DOMAIN,newlogin.ml.mlbangbang.com),(DEST-PORT,30021))
+AND,((DOMAIN,newlogin.ml.youngjoygame.com),(DEST-PORT,30021))
