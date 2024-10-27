@@ -6,3 +6,6 @@
 AND,((DOMAIN,login.ml.youngjoygame.com),(DEST-PORT,30021))
 AND,((DOMAIN,newlogin.ml.mlbangbang.com),(DEST-PORT,30021))
 AND,((DOMAIN,newlogin.ml.youngjoygame.com),(DEST-PORT,30021))
+
+#语音
+AND,((DOMAIN-SUFFIX,rtcplus.com),(OR,((DEST-PORT,80),(DEST-PORT,443))))
