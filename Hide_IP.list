@@ -5,7 +5,6 @@
 
 #IP监测
 AND,((DOMAIN,ip.ml.youngjoygame.com),(DEST-PORT,30220))
-AND,((IP-CIDR,169.46.193.4/32,no-resolve),(DEST-PORT,30220))
 AND,((IP-CIDR,169.46.193.122/32,no-resolve),(DEST-PORT,30220))
 
 #login网络活动解析ip，美国德克萨斯州达拉斯。
