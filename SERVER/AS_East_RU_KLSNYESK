@@ -1,0 +1,28 @@
+#!name = Asia/E🇷🇺俄罗斯克拉斯诺亚尔斯克
+#!desc = MLBB东亚俄罗斯边缘中心克拉斯诺亚尔斯克机房手动选择节点/禁入。用法说明：在游戏设置内（如点击大厅右上角，或对局内小地图旁的齿轮状⚙️图标，在“网络设置”一栏，第二行的“网络加速设置”栏目内的“网络加速”切换到关闭状态。
+#!openUrl = https://apps.apple.com/app/id1160056295
+#!author = Sign-in-or-sign-out
+#!homepage = 
+#!icon = 
+#!select = 
+#!input = 
+#!tag = 无尽对决东亚
+#!date = 2026-03-06 16:00:00
+
+[Rule]
+#IP登入检测:0
+#UDP30190PORT:1
+#RU，俄罗斯克拉斯诺亚尔斯克边缘中心
+AND,((IP-CIDR,92.223.87.38/32),(DEST-PORT,30190),(PROTOCOL,UDP)),REJECT
+
+#东亚俄罗斯边缘中心克拉斯诺亚尔斯克机房
+#92.223.87.0/24
+AND,((IP-CIDR,92.223.87.17/32,no-resolve),(OR,((DEST-PORT,5001-5008),(DEST-PORT,5501-5508)))),PROXY
+AND,((IP-CIDR,92.223.87.20/32,no-resolve),(OR,((DEST-PORT,5001-5008),(DEST-PORT,5501-5508)))),PROXY
+AND,((IP-CIDR,92.223.87.37/32,no-resolve),(OR,((DEST-PORT,5001-5008),(DEST-PORT,5501-5508)))),PROXY
+AND,((IP-CIDR,92.223.87.38/32,no-resolve),(OR,((DEST-PORT,5001-5008),(DEST-PORT,5501-5508)))),PROXY
+
+[MITM]
+hostname = 
+
+[Script]
