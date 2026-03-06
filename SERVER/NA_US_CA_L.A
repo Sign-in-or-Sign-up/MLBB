@@ -1,0 +1,38 @@
+#!name = America/N🇺🇸美国加利福利亚州洛杉矶
+#!desc = MLBB北美美国Zenlayer加利福利亚洛杉矶机房手动选择节点/禁入。用法说明：在游戏设置内（如点击大厅右上角，或对局内小地图旁的齿轮状⚙️图标，在“网络设置”一栏，第二行的“网络加速设置”栏目内的“网络加速”切换到关闭状态。
+#!openUrl = https://apps.apple.com/app/id1160056295
+#!author = Sign-in-or-sign-out
+#!homepage = 
+#!icon = 
+#!select = 
+#!input = 
+#!tag = 无尽对决北美
+#!date = 2026-01-30 15:00:00
+
+[Rule]
+#IP登入检测:0
+
+#UDP30190PORT:2
+#US，美国加利福利亚州洛杉矶Zenlayer
+AND,((IP-CIDR,128.14.140.38/32),(DEST-PORT,30190)),REJECT
+#US，美国加利福利亚州洛杉矶Zenlayer
+AND,((IP-CIDR,128.14.162.122/32),(DEST-PORT,30190),(PROTOCOL,UDP)),REJECT
+
+#北美美国Zenlayer加利福利亚州洛杉矶机房
+#98.98.86.0/24
+#AND,((IP-CIDR,98.98.86.0/24,no-resolve),(OR,((DEST-PORT,5001-5030),(DEST-PORT,5501-5530))),(PROTOCOL,UDP)),REJECT
+AND,((IP-CIDR,98.98.86.206/32,no-resolve),(OR,((DEST-PORT,5001-5030),(DEST-PORT,5501-5530)))),PROXY
+
+#128.14.140.0/24
+#AND,((IP-CIDR,128.14.140.0/24,no-resolve),(OR,((DEST-PORT,5001-5030),(DEST-PORT,5501-5530))),(PROTOCOL,UDP)),REJECT
+AND,((IP-CIDR,128.14.140.38/32,no-resolve),(OR,((DEST-PORT,5001-5007),(DEST-PORT,5501-5507)))),PROXY
+
+#128.14.162.0/24
+#AND,((IP-CIDR,128.14.162.0/24,no-resolve),(OR,((DEST-PORT,5001-5030),(DEST-PORT,5501-5530))),(PROTOCOL,UDP)),REJECT
+AND,((IP-CIDR,128.14.162.122/32,no-resolve),(OR,((DEST-PORT,5001-5012),(DEST-PORT,5501-5512)))),PROXY
+
+[MITM]
+hostname = 
+
+[Script]
+
