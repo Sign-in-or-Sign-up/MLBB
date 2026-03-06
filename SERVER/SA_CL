@@ -1,0 +1,27 @@
+#!name = America/S🇨🇱智利圣地亚哥
+#!desc = MLBB南美智利华为云圣地亚哥机房手动选择节点/禁入。用法说明：在游戏设置内（如点击大厅右上角，或对局内小地图旁的齿轮状⚙️图标，在“网络设置”一栏，第二行的“网络加速设置”栏目内的“网络加速”切换到关闭状态。
+#!openUrl = https://apps.apple.com/app/id1160056295
+#!author = Sign-in-or-sign-out
+#!homepage = 
+#!icon = 
+#!select = 
+#!input = 
+#!tag = 无尽对决南美
+#!date = 2026-01-29 22:00:00
+
+[Rule]
+#IP登入检测:0
+
+#UDP30190PORT:1
+#CL，智利圣地亚哥华为云
+AND,((IP-CIDR,110.238.68.214/32),(DEST-PORT,30190),(PROTOCOL,UDP)),REJECT
+
+#南美智利华为云圣地亚哥机房
+#110.238.68.0/24
+#AND,((IP-CIDR,110.238.68.0/24,no-resolve),(OR,((DEST-PORT,5001-5030),(DEST-PORT,5501-5530))),(PROTOCOL,UDP)),REJECT
+AND,((IP-CIDR,110.238.68.214/32,no-resolve),(OR,((DEST-PORT,5001-5008),(DEST-PORT,5501-5508)))),PROXY
+
+[MITM]
+hostname = 
+
+[Script]
