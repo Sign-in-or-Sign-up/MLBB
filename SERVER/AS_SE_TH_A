@@ -1,0 +1,48 @@
+#!name = Asia/Se🇹🇭泰国曼谷A
+#!desc = MLBB东南亚泰国阿里科技曼谷机房手动选择节点/禁入。用法说明：在游戏设置内（如点击大厅右上角，或对局内小地图旁的齿轮状⚙️图标，在“网络设置”一栏，第二行的“网络加速设置”栏目内的“网络加速”切换到关闭状态。
+#!openUrl = https://apps.apple.com/app/id1160056295
+#!author = Sign-in-or-sign-out
+#!homepage = 
+#!icon = 
+#!select = 
+#!input = 
+#!tag = 无尽对决东南亚
+#!date = 2026-02-17 02:42:00
+
+[Rule]
+#IP登入检测:0
+
+#UDP30190PORT:0
+
+#东南亚泰国阿里科技曼谷机房
+#8.213.192.0/24
+#AND,((IP-CIDR,8.213.192.0/24,no-resolve),(OR,((DEST-PORT,5001-5035),(DEST-PORT,5501-5535))),(PROTOCOL,UDP)),REJECT
+AND,((IP-CIDR,8.213.192.241/32,no-resolve),(OR,((DEST-PORT,5004-5008),(DEST-PORT,5504-5508)))),PROXY
+
+#8.213.232.0/24
+#AND,((IP-CIDR,8.213.232.0/24,no-resolve),(OR,((DEST-PORT,5001-5035),(DEST-PORT,5501-5535))),(PROTOCOL,UDP)),REJECT
+AND,((IP-CIDR,8.213.232.89/32,no-resolve),(OR,((DEST-PORT,5004-5008),(DEST-PORT,5504-5508)))),PROXY
+
+#47.81.10.0/24
+#AND,((IP-CIDR,47.81.10.0/24,no-resolve),(OR,((DEST-PORT,5001-5035),(DEST-PORT,5501-5535))),(PROTOCOL,UDP)),REJECT
+AND,((IP-CIDR,47.81.10.42/32,no-resolve),(OR,((DEST-PORT,5001-5016),(DEST-PORT,5501-5516)))),PROXY
+
+#47.87.67.0/24
+AND,((IP-CIDR,47.87.67.0/24,no-resolve),(OR,((DEST-PORT,5001-5035),(DEST-PORT,5501-5535))),(PROTOCOL,UDP)),REJECT
+IP-CIDR,47.87.67.35/32,PROXY
+AND,((IP-CIDR,0.0.0.0/32,no-resolve),(OR,((DEST-PORT,5001-5008),(DEST-PORT,5501-5508)))),PROXY
+
+#47.87.69.0/24
+#AND,((IP-CIDR,47.87.69.0/24,no-resolve),(OR,((DEST-PORT,5001-5035),(DEST-PORT,5501-5535))),(PROTOCOL,UDP)),REJECT
+AND,((IP-CIDR,47.87.69.57/32,no-resolve),(OR,((DEST-PORT,5001-5016),(DEST-PORT,5501-5516)))),PROXY
+AND,((IP-CIDR,47.87.69.165/32,no-resolve),(OR,((DEST-PORT,5001-5016),(DEST-PORT,5501-5516)))),PROXY
+
+#47.87.70.0/24
+#AND,((IP-CIDR,47.87.70.0/24,no-resolve),(OR,((DEST-PORT,5001-5035),(DEST-PORT,5501-5535))),(PROTOCOL,UDP)),REJECT
+AND,((IP-CIDR,47.87.70.129/32,no-resolve),(OR,((DEST-PORT,5001-5008),(DEST-PORT,5501-5508)))),PROXY
+
+
+[MITM]
+hostname = 
+
+[Script]
