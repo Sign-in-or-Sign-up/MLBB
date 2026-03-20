@@ -1,0 +1,32 @@
+#!name = America/N🇺🇸美国伊利诺伊州芝加哥
+#!desc = MLBB北美美国Zenlayer伊利诺伊州芝加哥机房手动选择节点/禁入。用法说明：在游戏设置内（如点击大厅右上角，或对局内小地图旁的齿轮状⚙️图标，在“网络设置”一栏，第二行的“网络加速设置”栏目内的“网络加速”切换到关闭状态。
+#!openUrl = https://apps.apple.com/app/id1160056295
+#!author = Sign-in-or-sign-out
+#!homepage = 
+#!icon = 
+#!select = 
+#!input = 
+#!tag = 无尽对决北美
+#!date = 2026-03-6 14:00:00
+
+[Rule]
+#IP登入检测:0
+
+#UDP30190PORT:2
+#US，美国伊利诺伊州芝加哥Zenlayer
+AND,((IP-CIDR,98.98.97.86/32),(DEST-PORT,30190)),REJECT
+AND,((IP-CIDR,98.98.97.122/32),(DEST-PORT,30190)),REJECT
+
+#北美美国Zenlayer伊利诺伊州芝加哥机房
+#98.98.97.0/24
+#AND,((IP-CIDR,98.98.97.0/24,no-resolve),(OR,((DEST-PORT,5001-5030),(DEST-PORT,5501-5530))),(PROTOCOL,UDP)),REJECT
+AND,((IP-CIDR,98.98.97.122/32,no-resolve),(OR,((DEST-PORT,5001-5008),(DEST-PORT,5501-5508)))),PROXY
+
+#98.98.101.0/24
+#AND,((IP-CIDR,98.98.101.0/24,no-resolve),(OR,((DEST-PORT,5001-5030),(DEST-PORT,5501-5530))),(PROTOCOL,UDP)),REJECT
+AND,((IP-CIDR,98.98.101.130/32,no-resolve),(OR,((DEST-PORT,5001-5008),(DEST-PORT,5501-5508)))),PROXY
+
+[MITM]
+hostname = 
+
+[Script]
