@@ -1,0 +1,37 @@
+#!name = America/S🇧🇴玻利维亚拉巴斯
+#!desc = MLBB南美玻利维亚玻利维亚手机拉巴斯机房手动选择节点/禁入。用法说明：在游戏设置内（如点击大厅右上角，或对局内小地图旁的齿轮状⚙️图标，在“网络设置”一栏，第二行的“网络加速设置”栏目内的“网络加速”切换到关闭状态。
+#!openUrl = https://apps.apple.com/app/id1160056295
+#!author = Sign-in-or-sign-out,当地节点赞助@YeWen[https://github.com/REDrYeWen]
+#!homepage = 
+#!icon = 
+#!select = 
+#!input = 
+#!tag = 无尽对决南美
+#!date = 2026-03-22 14:00:00
+
+[Rule]
+#IP登入检测:0
+
+#UDP30190PORT:4
+#BO，玻利维亚拉巴斯B
+AND,((IP-CIDR,190.104.20.37/32),(DEST-PORT,30190),(PROTOCOL,UDP)),REJECT
+AND,((IP-CIDR,190.104.20.38/32),(DEST-PORT,30190),(PROTOCOL,UDP)),REJECT
+AND,((IP-CIDR,190.104.20.52/32),(DEST-PORT,30190)),REJECT
+AND,((IP-CIDR,190.104.20.53/32),(DEST-PORT,30190)),REJECT
+
+#南美玻利维亚玻利维亚手机拉巴斯机房
+#190.104.20.0/24
+AND,((IP-CIDR,190.104.20.37/32,no-resolve),(OR,((DEST-PORT,5001-5008),(DEST-PORT,5501-5508)))),PROXY
+AND,((IP-CIDR,190.104.20.38/32,no-resolve),(OR,((DEST-PORT,5001-5008),(DEST-PORT,5501-5508)))),PROXY
+AND,((IP-CIDR,190.104.20.39/32,no-resolve),(OR,((DEST-PORT,5001-5008),(DEST-PORT,5501-5508)))),PROXY
+AND,((IP-CIDR,190.104.20.40/32,no-resolve),(OR,((DEST-PORT,5001-5008),(DEST-PORT,5501-5508)))),PROXY
+AND,((IP-CIDR,190.104.20.50/32,no-resolve),(OR,((DEST-PORT,5001-5008),(DEST-PORT,5501-5508)))),PROXY
+AND,((IP-CIDR,190.104.20.52/32,no-resolve),(OR,((DEST-PORT,5001-5008),(DEST-PORT,5501-5508)))),PROXY
+AND,((IP-CIDR,190.104.20.53/32,no-resolve),(OR,((DEST-PORT,5001-5008),(DEST-PORT,5501-5508)))),PROXY
+AND,((IP-CIDR,190.104.20.54/32,no-resolve),(OR,((DEST-PORT,5001-5008),(DEST-PORT,5501-5508)))),PROXY
+AND,((IP-CIDR,190.104.20.0/24,no-resolve),(OR,((DEST-PORT,5001-5008),(DEST-PORT,5501-5508))),(PROTOCOL,TCP)),PROXY
+
+[MITM]
+hostname = 
+
+[Script]
