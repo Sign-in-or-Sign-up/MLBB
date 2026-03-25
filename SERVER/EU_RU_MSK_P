@@ -1,0 +1,27 @@
+#!name = Europe🇷🇺俄罗斯莫斯科P
+#!desc = MLBB欧洲俄罗斯日本3D打印莫斯科机房手动选择节点/禁入。用法说明：在游戏设置内（如点击大厅右上角，或对局内小地图旁的齿轮状⚙️图标，在“网络设置”一栏，第二行的“网络加速设置”栏目内的“网络加速”切换到关闭状态。
+#!openUrl = https://apps.apple.com/app/id1160056295
+#!author = Sign-in-or-sign-out
+#!homepage = 
+#!icon = 
+#!select = 
+#!input = 
+#!tag = 无尽对决欧洲
+#!date = 2026-03-25 14:00:00
+
+[Rule]
+#IP登入检测:0
+#AND,((IP-CIDR,0.0.0.0/32),(DEST-PORT,30021),(PROTOCOL,TCP)),REJECT-DROP
+
+#UDP30190PORT:5
+#RU，俄罗斯莫斯科日本3D打印
+AND,((IP-CIDR,66.253.15.82/32),(DEST-PORT,30190)),REJECT
+#AND,((IP-CIDR,66.253.15.83/32),(DEST-PORT,30190)),REJECT
+#AND,((IP-CIDR,66.253.15.84/32),(DEST-PORT,30190)),REJECT
+#AND,((IP-CIDR,66.253.15.85/32),(DEST-PORT,30190)),REJECT
+#AND,((IP-CIDR,66.253.15.86/32),(DEST-PORT,30190),(PROTOCOL,UDP)),REJECT
+
+
+
+
+
