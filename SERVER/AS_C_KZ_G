@@ -1,0 +1,28 @@
+#!name = Asia/C🇰🇿哈萨克斯坦阿拉木图G
+#!desc = MLBB中亚哈萨克斯坦G-Core阿拉木图机房手动选择节点/禁入。用法说明：在游戏设置内（如点击大厅右上角，或对局内小地图旁的齿轮状⚙️图标，在“网络设置”一栏，第二行的“网络加速设置”栏目内的“网络加速”切换到关闭状态。
+#!openUrl = https://apps.apple.com/app/id1160056295
+#!author = Sign-in-or-sign-out
+#!homepage = 
+#!icon = 
+#!select = 
+#!input = 
+#!tag = 无尽对决中亚
+#!date = 2026-02-11 22:00:00
+
+[Rule]
+#IP登入检测:0
+#UDP30190PORT:1
+#KZ，哈萨克斯坦阿拉木图G-Core
+AND,((IP-CIDR,5.189.202.58/32),(DEST-PORT,30190)),REJECT
+
+#中亚哈萨克斯坦G-Core阿拉木图机房
+#5.189.202.0/24
+AND,((IP-CIDR,5.189.202.57/32,no-resolve),(OR,((DEST-PORT,5001-5008),(DEST-PORT,5501-5508)))),PROXY
+AND,((IP-CIDR,5.189.202.58/32,no-resolve),(OR,((DEST-PORT,5001-5008),(DEST-PORT,5501-5508)))),PROXY
+AND,((IP-CIDR,5.189.202.102/32,no-resolve),(OR,((DEST-PORT,5001-5008),(DEST-PORT,5501-5508)))),PROXY
+AND,((IP-CIDR,5.189.202.190/32,no-resolve),(OR,((DEST-PORT,5001-5008),(DEST-PORT,5501-5508)))),PROXY
+
+[MITM]
+hostname = 
+
+[Script]
