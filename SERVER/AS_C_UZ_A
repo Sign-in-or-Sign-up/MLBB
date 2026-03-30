@@ -1,0 +1,30 @@
+#!name = Asia/C🇺🇿乌兹别克斯坦塔什干A
+#!desc = MLBB中亚乌兹别克斯坦Airnet托什干塔什干手动选择节点/禁入。用法说明：在游戏设置内（如点击大厅右上角，或对局内小地图旁的齿轮状⚙️图标，在“网络设置”一栏，第二行的“网络加速设置”栏目内的“网络加速”切换到关闭状态。
+#!openUrl = https://apps.apple.com/app/id1160056295
+#!author = Sign-in-or-sign-out
+#!homepage = 
+#!icon = 
+#!select = 
+#!input = 
+#!tag = 无尽对决中亚
+#!date = 2024-11-02 19:00:00
+
+[Rule]
+#IP登入检测:0
+
+#UDP30190PORT:1
+#UZ，乌兹别克斯坦托什干塔什干Airnet
+AND,((IP-CIDR,176.96.241.44/32),(DEST-PORT,30190),(PROTOCOL,UDP)),REJECT-DROP
+
+#中亚乌兹别克斯坦Airnet托什干塔什干
+#176.96.241.0/24
+AND,((IP-CIDR,176.96.241.43/32,no-resolve),(OR,((DEST-PORT,5001-5008),(DEST-PORT,5501-5508)))),PROXY
+AND,((IP-CIDR,176.96.241.44/32,no-resolve),(OR,((DEST-PORT,5001-5008),(DEST-PORT,5501-5508)))),PROXY
+
+#176.221.28.0/24
+AND,((IP-CIDR,176.221.28.226/32,no-resolve),(OR,((DEST-PORT,5001-5008),(DEST-PORT,5501-5508)))),PROXY
+
+[MITM]
+hostname = 
+
+[Script]
