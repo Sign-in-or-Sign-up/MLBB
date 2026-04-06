@@ -1,0 +1,35 @@
+#!name = America/S🇦🇷阿根廷布宜诺斯艾利斯
+#!desc = MLBB南美阿根廷华为云布宜诺斯艾利斯机房手动选择节点/禁入。用法说明：在游戏设置内（如点击大厅右上角，或对局内小地图旁的齿轮状⚙️图标，在“网络设置”一栏，第二行的“网络加速设置”栏目内的“网络加速”切换到关闭状态。
+#!openUrl = https://apps.apple.com/app/id1160056295
+#!author = Sign-in-or-sign-out
+#!homepage = 
+#!icon = 
+#!select = 
+#!input = 
+#!tag = 无尽对决南美
+#!date = 2025-12-05 08:00:00
+
+[Rule]
+#IP登入检测:0
+
+#UDP30190PORT:3
+#AR，阿根廷布宜诺斯艾利斯华为云
+AND,((IP-CIDR,119.8.75.95/32),(DEST-PORT,30190)),REJECT
+AND,((IP-CIDR,119.8.76.160/32),(DEST-PORT,30190),(PROTOCOL,UDP)),REJECT
+AND,((IP-CIDR,119.8.77.208/32),(DEST-PORT,30190),(PROTOCOL,UDP)),REJECT
+
+#南美阿根廷华为云布宜诺斯艾利斯机房
+#119.8.74.0/24
+IP-CIDR,119.8.74.164/32,PROXY
+AND,((IP-CIDR,119.8.74.164/32,no-resolve),(OR,((DEST-PORT,5001-5004),(DEST-PORT,5501-5504)))),PROXY
+
+#119.8.75.0/24
+IP-CIDR,119.8.75.95/32,PROXY
+IP-CIDR,119.8.75.211/32,PROXY
+AND,((IP-CIDR,119.8.75.95/32,no-resolve),(OR,((DEST-PORT,5001-5008),(DEST-PORT,5501-5508)))),PROXY
+AND,((IP-CIDR,119.8.75.211/32,no-resolve),(OR,((DEST-PORT,5001-5004),(DEST-PORT,5501-5504)))),PROXY
+#119.8.77.0/24
+IP-CIDR,119.8.77.208/32,PROXY
+AND,((IP-CIDR,119.8.77.208/32,no-resolve),(OR,((DEST-PORT,5001-5003),(DEST-PORT,5501-5503)))),PROXY
+
+
