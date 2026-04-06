@@ -1,0 +1,37 @@
+#!name = America/N🇺🇸美国佛罗里达州迈阿密C1
+#!desc = MLBB北美美国CDS佛罗里达州迈阿密机房手动选择节点/禁入。用法说明：在游戏设置内（如点击大厅右上角，或对局内小地图旁的齿轮状⚙️图标，在“网络设置”一栏，第二行的“网络加速设置”栏目内的“网络加速”切换到关闭状态。
+#!openUrl = https://apps.apple.com/app/id1160056295
+#!author = Sign-in-or-sign-out
+#!homepage = 
+#!icon = 
+#!select = 
+#!input = 
+#!tag = 无尽对决北美
+#!date = 2025-11-25 20:39:00
+
+[Rule]
+#IP登入检测:
+
+#UDP30190PORT:
+#US，美国佛罗里达州迈阿密CDS
+AND,((IP-CIDR,148.153.249.34/32),(DEST-PORT,30190)),REJECT
+AND,((IP-CIDR,148.153.249.36/32),(DEST-PORT,30190)),REJECT
+#AND,((IP-CIDR,148.153.249.38/32),(DEST-PORT,30190),(PROTOCOL,UDP)),REJECT
+
+#北美美国CDS佛罗里达州迈阿密机房
+#148.153.246.0/24
+#AND,((IP-CIDR,148.153.246.0/24,no-resolve),(OR,((DEST-PORT,5001-5030),(DEST-PORT,5501-5530))),(PROTOCOL,UDP)),REJECT
+IP-CIDR,148.153.246.70/32,PROXY
+AND,((IP-CIDR,0.0.0.0/32,no-resolve),(OR,((DEST-PORT,5001-5008),(DEST-PORT,5501-5508)))),PROXY
+
+#北美美国CDS佛罗里达州迈阿密机房
+#148.153.249.0/24
+#AND,((IP-CIDR,148.153.249.0/24,no-resolve),(OR,((DEST-PORT,5001-5030),(DEST-PORT,5501-5530))),(PROTOCOL,UDP)),REJECT
+AND,((IP-CIDR,148.153.249.34/32,no-resolve),(OR,((DEST-PORT,5001-5008),(DEST-PORT,5501-5508)))),PROXY
+AND,((IP-CIDR,148.153.249.35/32,no-resolve),(OR,((DEST-PORT,5001-5008),(DEST-PORT,5501-5508)))),PROXY
+AND,((IP-CIDR,148.153.249.36/32,no-resolve),(OR,((DEST-PORT,5001-5008),(DEST-PORT,5501-5508)))),PROXY
+AND,((IP-CIDR,148.153.249.37/32,no-resolve),(OR,((DEST-PORT,5001-5008),(DEST-PORT,5501-5508)))),PROXY
+AND,((IP-CIDR,148.153.249.38/32,no-resolve),(OR,((DEST-PORT,5001-5008),(DEST-PORT,5501-5508)))),PROXY
+AND,((IP-CIDR,148.153.249.0/24,no-resolve),(OR,((DEST-PORT,5001-5008),(DEST-PORT,5501-5508))),(PROTOCOL,TCP)),PROXY
+
+
