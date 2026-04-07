@@ -1,0 +1,27 @@
+#!name = Asia/Se🇮🇩印度尼西亚雅加达P3
+#!desc = MLBB东南亚印尼PT_Omni雅加达机房手动选择节点/禁入。用法说明：在游戏设置内（如点击大厅右上角，或对局内小地图旁的齿轮状⚙️图标，在“网络设置”一栏，第二行的“网络加速设置”栏目内的“网络加速”切换到关闭状态。
+#!openUrl = https://apps.apple.com/app/id1160056295
+#!author = Sign-in-or-sign-out
+#!homepage = 
+#!icon = 
+#!select = 
+#!input = 
+#!tag = 无尽对决东南亚
+#!date = 2025-09-08 17:00:00
+
+[Rule]
+#IP登入检测:0
+
+#UDP30190PORT:4
+#ID，印度尼西亚雅加达PT_Omni
+AND,((IP-CIDR,103.242.150.2/32),(DEST-PORT,30190),(PROTOCOL,UDP)),REJECT
+AND,((IP-CIDR,103.242.150.11/32),(DEST-PORT,30190),(PROTOCOL,UDP)),REJECT
+AND,((IP-CIDR,103.242.150.12/32),(DEST-PORT,30190),(PROTOCOL,UDP)),REJECT
+AND,((IP-CIDR,103.242.150.13/32),(DEST-PORT,30190),(PROTOCOL,UDP)),REJECT
+
+#东南亚印尼PT_Omni雅加达三机房
+#103.242.150.0/24
+AND,((IP-CIDR,103.242.150.82/32,no-resolve),(OR,((DEST-PORT,5001-5022),(DEST-PORT,5501-5522)))),PROXY
+AND,((IP-CIDR,103.242.150.84/32,no-resolve),(OR,((DEST-PORT,5001-5022),(DEST-PORT,5501-5522)))),PROXY
+AND,((IP-CIDR,103.242.150.86/32,no-resolve),(OR,((DEST-PORT,5001-5022),(DEST-PORT,5501-5522)))),PROXY
+AND,((IP-CIDR,103.242.150.0/24,no-resolve),(OR,((DEST-PORT,5001-5022),(DEST-PORT,5501-5522))),(PROTOCOL,TCP)),PROXY
