@@ -1,0 +1,33 @@
+#!name = Asia/S🇳🇵尼泊尔加德满都D
+#!desc = MLBB南亚尼泊尔数据枢纽巴格马蒂省加德满都机房手动选择节点/禁入。用法说明：在游戏设置内（如点击大厅右上角，或对局内小地图旁的齿轮状⚙️图标，在“网络设置”一栏，第二行的“网络加速设置”栏目内的“网络加速”切换到关闭状态。
+#!openUrl = https://apps.apple.com/app/id1160056295
+#!author = Sign-in-or-sign-out
+#!homepage = 
+#!icon = 
+#!select = 
+#!input = 
+#!tag = 无尽对决南亚
+#!date = 2024-11-02 19:00:00
+
+[Rule]
+#IP登入检测:0
+
+#UDP30190PORT:
+#NP，尼泊尔巴格马蒂省加德满都数据枢纽
+#AND,((IP-CIDR,45.115.219.228/32),(DEST-PORT,30190),(PROTOCOL,UDP)),REJECT-DROP
+#AND,((IP-CIDR,45.115.219.230/32),(DEST-PORT,30190),(PROTOCOL,UDP)),REJECT-DROP
+
+#南亚尼泊尔数据枢纽巴格马蒂省加德满都机房
+#45.115.219.0/24
+IP-CIDR,45.115.219.228/32,PROXY
+IP-CIDR,45.115.219.229/32,PROXY
+IP-CIDR,45.115.219.230/32,PROXY
+AND,((IP-CIDR,45.115.219.228/32,no-resolve),(OR,((DEST-PORT,5001-5008),(DEST-PORT,5501-5508)))),PROXY
+AND,((IP-CIDR,45.115.219.229/32,no-resolve),(OR,((DEST-PORT,5001-5008),(DEST-PORT,5501-5508)))),PROXY
+AND,((IP-CIDR,45.115.219.230/32,no-resolve),(OR,((DEST-PORT,5001-5007),(DEST-PORT,5501-5507)))),PROXY
+AND,((IP-CIDR,45.115.219.0/24,no-resolve),(OR,((DEST-PORT,5001-5008),(DEST-PORT,5501-5508))),(PROTOCOL,TCP)),PROXY
+
+[MITM]
+hostname = 
+
+[Script]
