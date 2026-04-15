@@ -1,4 +1,4 @@
-#!name = Europe🇵🇱波兰华沙
+#!name = Europe🇵🇱波兰华沙G
 #!desc = MLBB欧洲波兰G-CORE华沙机房手动选择节点/禁入。用法说明：在游戏设置内（如点击大厅右上角，或对局内小地图旁的齿轮状⚙️图标，在“网络设置”一栏，第二行的“网络加速设置”栏目内的“网络加速”切换到关闭状态。
 #!openUrl = https://apps.apple.com/app/id1160056295
 #!author = Sign-in-or-sign-out
@@ -20,31 +20,34 @@ AND,((IP-CIDR,5.188.108.230/32),(DEST-PORT,30190)),REJECT
 AND,((IP-CIDR,5.188.108.235/32),(DEST-PORT,30190),(PROTOCOL,UDP)),REJECT
 
 #欧洲波兰G-CORE华沙机房
-#5.188.108.0/24
-#AND,((IP-CIDR,5.188.108.0/24,no-resolve),(OR,((DEST-PORT,5001-5030),(DEST-PORT,5501-5530))),(PROTOCOL,UDP)),REJECT
-AND,((IP-CIDR,5.188.108.112/32,no-resolve),(OR,((DEST-PORT,5001-5004),(DEST-PORT,5501-5504)))),PROXY
-AND,((IP-CIDR,5.188.108.230/32,no-resolve),(OR,((DEST-PORT,5001-5004),(DEST-PORT,5501-5504)))),PROXY
-AND,((IP-CIDR,5.188.108.235/32,no-resolve),(OR,((DEST-PORT,5001-5004),(DEST-PORT,5501-5504)))),PROXY
+#5.188.108.0/24，端口校对
 
-#5.189.221.0/24
-#AND,((IP-CIDR,5.189.221.0/24,no-resolve),(OR,((DEST-PORT,5001-5030),(DEST-PORT,5501-5530))),(PROTOCOL,UDP)),REJECT
-AND,((IP-CIDR,5.189.221.168/32,no-resolve),(OR,((DEST-PORT,5001-5004),(DEST-PORT,5501-5504)))),PROXY
+AND,((IP-CIDR,5.188.108.112/32,no-resolve),(OR,((DEST-PORT,5001-5004),(DEST-PORT,5501-5504)))),PROXY
+
+AND,((IP-CIDR,5.188.108.230/32,no-resolve),(OR,((DEST-PORT,5001-5004),(DEST-PORT,5501-5504)))),PROXY
+AND,((IP-CIDR,5.188.108.235/32,no-resolve),(OR,((DEST-PORT,5002-5004),(DEST-PORT,5502-5504)))),PROXY
+
+AND,((IP-CIDR,5.188.108.0/24,no-resolve),(OR,((DEST-PORT,5001-5004),(DEST-PORT,5501-5504))),(PROTOCOL,TCP)),PROXY
+
+#5.189.221.0/24，端口校对
+
+AND,((IP-CIDR,5.189.221.168/32,no-resolve),(OR,((DEST-PORT,5001-5004),(DEST-PORT,5502-5504)))),PROXY
+
 AND,((IP-CIDR,5.189.221.216/32,no-resolve),(OR,((DEST-PORT,5001-5004),(DEST-PORT,5501-5504)))),PROXY
 
-#79.133.122.0/24
-#AND,((IP-CIDR,79.133.122.0/24,no-resolve),(OR,((DEST-PORT,5001-5030),(DEST-PORT,5501-5530))),(PROTOCOL,UDP)),REJECT
-AND,((IP-CIDR,79.133.122.126/32,no-resolve),(OR,((DEST-PORT,5001-5004),(DEST-PORT,5501-5504)))),PROXY
-AND,((IP-CIDR,79.133.122.127/32,no-resolve),(OR,((DEST-PORT,5001-5004),(DEST-PORT,5501-5504)))),PROXY
+#79.133.122.0/24，端口校对
+
+AND,((IP-CIDR,79.133.122.126/32,no-resolve),(OR,((DEST-PORT,5002-5004),(DEST-PORT,5502-5504)))),PROXY
+AND,((IP-CIDR,79.133.122.127/32,no-resolve),(OR,((DEST-PORT,5002-5004),(DEST-PORT,5502-5504)))),PROXY
 AND,((IP-CIDR,79.133.122.128/32,no-resolve),(OR,((DEST-PORT,5001-5004),(DEST-PORT,5501-5504)))),PROXY
 
-#89.223.91.0/24
-#AND,((IP-CIDR,89.223.91.0/24,no-resolve),(OR,((DEST-PORT,5001-5030),(DEST-PORT,5501-5530))),(PROTOCOL,UDP)),REJECT
+AND,((IP-CIDR,79.133.122.0/24,no-resolve),(OR,((DEST-PORT,5001-5004),(DEST-PORT,5501-5504))),(PROTOCOL,TCP)),PROXY
+
+#89.223.91.0/24，端口校对
+
 AND,((IP-CIDR,89.223.91.14/32,no-resolve),(OR,((DEST-PORT,5001-5004),(DEST-PORT,5501-5504)))),PROXY
 
 [MITM]
 hostname = 
 
 [Script]
-
-
-
