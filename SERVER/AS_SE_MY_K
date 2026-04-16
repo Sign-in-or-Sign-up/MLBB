@@ -1,0 +1,44 @@
+#!name = Asia/Se🇲🇾马来西亚吉隆坡K
+#!desc = MLBB东南亚马来西亚靠谱云吉隆坡机房手动选择节点/禁入。用法说明：在游戏设置内（如点击大厅右上角，或对局内小地图旁的齿轮状⚙️图标，在“网络设置”一栏，第二行的“网络加速设置”栏目内的“网络加速”切换到关闭状态。
+#!openUrl = https://apps.apple.com/app/id1160056295
+#!author = Sign-in-or-sign-out
+#!homepage = 
+#!icon = 
+#!select = 
+#!input = 
+#!tag = 无尽对决东南亚
+#!date = 2025-06-22 23:00:00
+
+[Rule]
+#IP登入检测:1
+AND,((IP-CIDR,38.54.98.249/32),(DEST-PORT,30021),(PROTOCOL,TCP)),REJECT-DROP
+
+#UDP30190PORT:8
+#MY，马来西亚吉隆坡靠谱云
+#AND,((IP-CIDR,38.54.98.8/32),(DEST-PORT,30190),(PROTOCOL,UDP)),REJECT
+AND,((IP-CIDR,38.54.98.50/32),(DEST-PORT,30190)),REJECT
+AND,((IP-CIDR,38.54.98.57/32),(DEST-PORT,30190)),REJECT
+#ID，印尼雅加达靠谱云
+#AND,((IP-CIDR,149.104.113.8/32),(DEST-PORT,30190),(PROTOCOL,UDP)),REJECT
+#AND,((IP-CIDR,149.104.113.64/32),(DEST-PORT,30190),(PROTOCOL,UDP)),REJECT
+#AND,((IP-CIDR,149.104.113.98/32),(DEST-PORT,30190),(PROTOCOL,UDP)),REJECT
+#AND,((IP-CIDR,149.104.113.219/32),(DEST-PORT,30190),(PROTOCOL,UDP)),REJECT
+#AND,((IP-CIDR,149.104.113.241/32),(DEST-PORT,30190),(PROTOCOL,UDP)),REJECT
+
+#东南亚马来西亚靠谱云吉隆坡机房
+#38.54.98.0/24
+
+AND,((IP-CIDR,38.54.98.0/24,no-resolve),(OR,((DEST-PORT,5001-5008),(DEST-PORT,5501-5508))),(PROTOCOL,TCP)),PROXY
+
+#38.54.99.0/24
+
+AND,((IP-CIDR,38.54.99.0/24,no-resolve),(OR,((DEST-PORT,5001-5008),(DEST-PORT,5501-5508))),(PROTOCOL,TCP)),PROXY
+
+#149.104.112.0/24
+
+AND,((IP-CIDR,149.104.112.0/24,no-resolve),(OR,((DEST-PORT,5001-5008),(DEST-PORT,5501-5508))),(PROTOCOL,TCP)),PROXY
+
+[MITM]
+hostname = 
+
+[Script]
