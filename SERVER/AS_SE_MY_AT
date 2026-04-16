@@ -7,7 +7,7 @@
 #!select = 
 #!input = 
 #!tag = 无尽对决东南亚
-#!date = 2026-02-08 03:00:00
+#!date = 2026-04-17 03:00:00
 
 [Rule]
 #IP登入检测:0
@@ -15,8 +15,11 @@
 #UDP30190PORT:0
 
 #东南亚马来西亚阿里科技吉隆坡机房
-#47.250.194.0/24
-AND,((IP-CIDR,47.250.194.188/32,no-resolve),(OR,((DEST-PORT,5001-5008),(DEST-PORT,5501-5508)))),PROXY
+#47.250.194.0/24，端口校对
+
+AND,((IP-CIDR,47.250.194.188/32,no-resolve),(OR,((DEST-PORT,5005-5007),(DEST-PORT,5505-5507)))),PROXY
+
+AND,((IP-CIDR,47.250.194.0/24,no-resolve),(OR,((DEST-PORT,5001-5008),(DEST-PORT,5501-5508))),(PROTOCOL,TCP)),PROXY
 
 [MITM]
 hostname = 
