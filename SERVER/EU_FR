@@ -12,7 +12,9 @@
 [Rule]
 #IP登入检测:0
 
-#UDP30190PORT:0
+#UDP30190PORT:1
+#FR,法国巴黎Zenlayer
+AND,((IP-CIDR,23.90.186.147/32),(DEST-PORT,30190),(PROTOCOL,UDP)),REJECT
 
 #欧洲法国Zenlayer巴黎机房
 #98.98.145.0/24，端口校对
