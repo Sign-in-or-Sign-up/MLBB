@@ -7,12 +7,14 @@
 #!select = 
 #!input = 
 #!tag = 无尽对决南美
-#!date = 2025-12-05 08:00:00
+#!date = 2026-05-29 03:00:00
 
 [Rule]
 #IP登入检测:0
 
-#UDP30190PORT:3
+#UDP30190PORT:4
+#AR，阿根廷布宜诺斯艾利斯华为云
+AND,((IP-CIDR,119.8.73.33/32),(DEST-PORT,30190)),REJECT
 #AR，阿根廷布宜诺斯艾利斯华为云
 AND,((IP-CIDR,119.8.75.95/32),(DEST-PORT,30190)),REJECT
 AND,((IP-CIDR,119.8.76.160/32),(DEST-PORT,30190),(PROTOCOL,UDP)),REJECT
