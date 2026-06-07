@@ -12,9 +12,11 @@
 [Rule]
 #IP登入检测:0
 
-#UDP30190PORT:1
+#UDP30190PORT:2
 #ES，西班牙马德里Zenlayer
 AND,((IP-CIDR,23.90.188.162/32),(DEST-PORT,30190)),REJECT
+#ES，西班牙马德里Zenlayer
+AND,((IP-CIDR,98.98.171.134/32),(DEST-PORT,30190)),REJECT
 
 #欧洲西班牙Zenlayer马德里机房
 #98.98.171.0/24，端口校对
