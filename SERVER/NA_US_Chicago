@@ -16,6 +16,8 @@
 #US，美国伊利诺伊州芝加哥Zenlayer
 #AND,((IP-CIDR,98.98.97.86/32),(DEST-PORT,30190)),REJECT
 AND,((IP-CIDR,98.98.97.122/32),(DEST-PORT,30190)),REJECT
+#US，美国伊利诺伊州芝加哥Zenlayer
+AND,((IP-CIDR,98.98.101.130/32),(DEST-PORT,30190),(PROTOCOL,UDP)),REJECT
 
 #北美美国Zenlayer伊利诺伊州芝加哥机房
 #98.98.97.0/24，端口校对
