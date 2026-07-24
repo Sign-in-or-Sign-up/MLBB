@@ -1,0 +1,44 @@
+#!name = Asia/E🇯🇵日本东京T
+#!desc = MLBB日本腾讯东京机房手动选择节点/禁入。用法说明：在游戏设置内（如点击大厅右上角，或对局内小地图旁的齿轮状⚙️图标，在“网络设置”一栏，第二行的“网络加速设置”栏目内的“网络加速”切换到关闭状态。用此插件认同港澳台都是中华人民共和国一部份。台独🐸用此文件及衍生文件被雄3飞弹追着误炸。
+#!openUrl = https://apps.apple.com/app/id1160056295
+#!author = Sign-in-or-sign-out
+#!homepage = 
+#!icon = 
+#!select = 
+#!input = 
+#!tag = 无尽对决东亚
+#!date = 2026-07-25 05:00:00
+
+[Rule]
+#IP登入检测:
+
+#UDP30190PORT:
+#JP，日本东京腾讯
+AND,((IP-CIDR,43.133.165.32/32),(DEST-PORT,30190),(PROTOCOL,UDP)),REJECT
+#JP，日本东京腾讯
+AND,((IP-CIDR,43.133.218.215/32),(DEST-PORT,30190)),REJECT
+#JP，日本东京腾讯
+AND,((IP-CIDR,43.153.152.18/32),(DEST-PORT,30190)),REJECT
+#JP，日本东京腾讯
+AND,((IP-CIDR,43.163.220.159/32),(DEST-PORT,30190)),REJECT
+#JP，日本东京腾讯
+AND,((IP-CIDR,43.167.29.121/32),(DEST-PORT,30190)),REJECT
+#JP，日本东京腾讯
+AND,((IP-CIDR,43.167.179.2/32),(DEST-PORT,30190)),REJECT
+#JP，日本东京腾讯
+AND,((IP-CIDR,43.167.199.87/32),(DEST-PORT,30190)),REJECT
+#JP，日本东京腾讯
+AND,((IP-CIDR,43.167.226.169/32),(DEST-PORT,30190),(PROTOCOL,UDP)),REJECT
+
+#东亚日本腾讯东京机房
+#43.163.220.0/24，端口校对
+
+AND,((IP-CIDR,43.163.220.159/32,no-resolve),(OR,((DEST-PORT,5004),(DEST-PORT,5504)))),PROXY
+
+AND,((IP-CIDR,43.163.220.0/24,no-resolve),(OR,((DEST-PORT,5001-5008),(DEST-PORT,5501-5508))),(PROTOCOL,TCP)),PROXY
+
+
+[MITM]
+hostname = 
+
+[Script]
