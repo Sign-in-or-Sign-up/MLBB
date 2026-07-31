@@ -1,0 +1,39 @@
+#!name = America/S🇧🇷巴西圣保罗T
+#!desc = MLBB南美巴西腾讯圣保罗机房手动选择节点/禁入。用法说明：在游戏设置内（如点击大厅右上角，或对局内小地图旁的齿轮状⚙️图标，在“网络设置”一栏，第二行的“网络加速设置”栏目内的“网络加速”切换到关闭状态。
+#!openUrl = https://apps.apple.com/app/id1160056295
+#!author = Sign-in-or-sign-out
+#!homepage = 
+#!icon = 
+#!select = 
+#!input = 
+#!tag = 无尽对决南美
+#!date = 2026-02-24 12:00:00
+
+[Rule]
+#IP登入检测:0
+#UDP30190PORT:4
+#BR，巴西圣保罗腾讯
+AND,((IP-CIDR,43.157.182.168/32),(DEST-PORT,30190)),REJECT
+#BR，巴西圣保罗腾讯
+AND,((IP-CIDR,43.157.188.195/32),(DEST-PORT,30190)),REJECT
+#BR，巴西圣保罗腾讯
+AND,((IP-CIDR,43.166.66.154/32),(DEST-PORT,30190),(PROTOCOL,UDP)),REJECT
+#BR，巴西圣保罗腾讯
+AND,((IP-CIDR,43.166.79.83/32),(DEST-PORT,30190),(PROTOCOL,UDP)),REJECT
+#BR，巴西圣保罗腾讯
+AND,((IP-CIDR,43.166.80.40/32),(DEST-PORT,30190),(PROTOCOL,UDP)),REJECT
+#BR，巴西圣保罗腾讯
+AND,((IP-CIDR,43.166.80.189/32),(DEST-PORT,30190)),REJECT
+
+#南美巴西Zenlayer圣保罗机房
+#43.166.80.0/24，端口校对
+
+AND,((IP-CIDR,43.166.80.40/32,no-resolve),(OR,((DEST-PORT,5002),(DEST-PORT,5502)))),PROXY
+
+AND,((IP-CIDR,43.166.80.0/24,no-resolve),(OR,((DEST-PORT,5001-5008),(DEST-PORT,5501-5508))),(PROTOCOL,TCP)),PROXY
+
+
+[MITM]
+hostname = 
+
+[Script]
