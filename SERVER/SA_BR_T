@@ -11,7 +11,8 @@
 
 [Rule]
 #IP登入检测:0
-#UDP30190PORT:4
+
+#UDP30190PORT:
 #BR，巴西圣保罗腾讯
 AND,((IP-CIDR,43.157.182.168/32),(DEST-PORT,30190)),REJECT
 #BR，巴西圣保罗腾讯
