@@ -1,0 +1,17 @@
+#!name = Mobile Legends 3005人机
+#!desc = 通过识别某游戏中一批可疑的头像链接，对这些头像图片进行提示，用于辅助识别对局中的人机玩家。这些头像原本属于早年注册、疑似已弃游的帐号，官方可能将其随机挪用至人机头像框，因此头像与当前对局玩家未必对应。但该批链接特征明显，仍可作为区分真人与电脑的积极参考，并非绝对判定依据。
+#!openUrl = https://apps.apple.com/app/id1160056295
+#!author = Sign-in-or-sign-out
+#!homepage = 
+#!icon = 
+#!select = 
+#!input = 
+#!tag = 无尽对决
+#!date = 2026-10-05 06:49:00
+
+[Rule]
+
+[MITM]
+hostname = akmpicture.youngjoygame.com
+
+[Rewrite]
