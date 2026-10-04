@@ -1,1 +1,17 @@
+#!name = Mobile Legends 1001人机识别
+#!desc = 通过头像文件命名规律初步识别人机和真实玩家。
+#!openUrl = https://apps.apple.com/app/id1160056295
+#!author = Sign-in-or-sign-out
+#!homepage = 
+#!icon = 
+#!select = 
+#!input = 
+#!tag = 无尽对决
+#!date = 2026-10-05 04:00:00
 
+[Rule]
+
+[MITM]
+hostname = akmpicture.youngjoygame.com
+
+[Rewrite]
