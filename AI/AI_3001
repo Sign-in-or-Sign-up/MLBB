@@ -15,3 +15,40 @@
 hostname = akmpicture.youngjoygame.com
 
 [Rewrite]
+
+##六位uuid##
+request if ${url} ~= /^https:\/\/akmpicture\.youngjoygame\.com\/dist\/face\/3001\/0\/4\/860400_(1|2)\.jpg$/ then redirect(302, "https://raw.githubusercontent.com/Sign-in-or-Sign-up/MLBB/main/face/3001.jpg")
+request if ${url} ~= /^https:\/\/akmpicture\.youngjoygame\.com\/dist\/face\/3001\/0\/15\/891500_(0)\.jpg$/ then redirect(302, "https://raw.githubusercontent.com/Sign-in-or-Sign-up/MLBB/main/face/3001.jpg")
+request if ${url} ~= /^https:\/\/akmpicture\.youngjoygame\.com\/dist\/face\/3001\/0\/36\/893600_(0)\.jpg$/ then redirect(302, "https://raw.githubusercontent.com/Sign-in-or-Sign-up/MLBB/main/face/3001.jpg")
+request if ${url} ~= /^https:\/\/akmpicture\.youngjoygame\.com\/dist\/face\/3001\/0\/38\/893800_(0|5)\.jpg$/ then redirect(302, "https://raw.githubusercontent.com/Sign-in-or-Sign-up/MLBB/main/face/3001.jpg")
+request if ${url} ~= /^https:\/\/akmpicture\.youngjoygame\.com\/dist\/face\/3001\/0\/16\/911600_(0)\.jpg$/ then redirect(302, "https://raw.githubusercontent.com/Sign-in-or-Sign-up/MLBB/main/face/3001.jpg")
+request if ${url} ~= /^https:\/\/akmpicture\.youngjoygame\.com\/dist\/face\/3001\/0\/20\/942000_(1)\.jpg$/ then redirect(302, "https://raw.githubusercontent.com/Sign-in-or-Sign-up/MLBB/main/face/3001.jpg")
+request if ${url} ~= /^https:\/\/akmpicture\.youngjoygame\.com\/dist\/face\/3001\/0\/74\/947400_(1)\.jpg$/ then redirect(302, "https://raw.githubusercontent.com/Sign-in-or-Sign-up/MLBB/main/face/3001.jpg")
+request if ${url} ~= /^https:\/\/akmpicture\.youngjoygame\.com\/dist\/face\/3001\/0\/44\/974400_(0)\.jpg$/ then redirect(302, "https://raw.githubusercontent.com/Sign-in-or-Sign-up/MLBB/main/face/3001.jpg")
+
+##七位uuid##
+request if ${url} ~= /^https:\/\/akmpicture\.youngjoygame\.com\/dist\/face\/3001\/0\/58\/1015800_(0)\.jpg$/ then redirect(302, "https://raw.githubusercontent.com/Sign-in-or-Sign-up/MLBB/main/face/3001.jpg")
+request if ${url} ~= /^https:\/\/akmpicture\.youngjoygame\.com\/dist\/face\/3001\/0\/19\/1021900_(0)\.jpg$/ then redirect(302, "https://raw.githubusercontent.com/Sign-in-or-Sign-up/MLBB/main/face/3001.jpg")
+request if ${url} ~= /^https:\/\/akmpicture\.youngjoygame\.com\/dist\/face\/3001\/0\/49\/1024900_(0)\.jpg$/ then redirect(302, "https://raw.githubusercontent.com/Sign-in-or-Sign-up/MLBB/main/face/3001.jpg")
+request if ${url} ~= /^https:\/\/akmpicture\.youngjoygame\.com\/dist\/face\/3001\/0\/16\/1071600_(0|1)\.jpg$/ then redirect(302, "https://raw.githubusercontent.com/Sign-in-or-Sign-up/MLBB/main/face/3001.jpg")
+request if ${url} ~= /^https:\/\/akmpicture\.youngjoygame\.com\/dist\/face\/3001\/0\/4\/1080400_(0)\.jpg$/ then redirect(302, "https://raw.githubusercontent.com/Sign-in-or-Sign-up/MLBB/main/face/3001.jpg")
+request if ${url} ~= /^https:\/\/akmpicture\.youngjoygame\.com\/dist\/face\/3001\/0\/19\/1081900_(2)\.jpg$/ then redirect(302, "https://raw.githubusercontent.com/Sign-in-or-Sign-up/MLBB/main/face/3001.jpg")
+request if ${url} ~= /^https:\/\/akmpicture\.youngjoygame\.com\/dist\/face\/3001\/0\/58\/1085800_(4|9|12|15)\.jpg$/ then redirect(302, "https://raw.githubusercontent.com/Sign-in-or-Sign-up/MLBB/main/face/3001.jpg")
+request if ${url} ~= /^https:\/\/akmpicture\.youngjoygame\.com\/dist\/face\/3001\/0\/35\/1103500_(0)\.jpg$/ then redirect(302, "https://raw.githubusercontent.com/Sign-in-or-Sign-up/MLBB/main/face/3001.jpg")
+request if ${url} ~= /^https:\/\/akmpicture\.youngjoygame\.com\/dist\/face\/3001\/0\/1\/1110100_(0)\.jpg$/ then redirect(302, "https://raw.githubusercontent.com/Sign-in-or-Sign-up/MLBB/main/face/3001.jpg")
+request if ${url} ~= /^https:\/\/akmpicture\.youngjoygame\.com\/dist\/face\/3001\/0\/67\/1186700_(0)\.jpg$/ then redirect(302, "https://raw.githubusercontent.com/Sign-in-or-Sign-up/MLBB/main/face/3001.jpg")
+request if ${url} ~= /^https:\/\/akmpicture\.youngjoygame\.com\/dist\/face\/3001\/0\/24\/1192400_(1)\.jpg$/ then redirect(302, "https://raw.githubusercontent.com/Sign-in-or-Sign-up/MLBB/main/face/3001.jpg")
+request if ${url} ~= /^https:\/\/akmpicture\.youngjoygame\.com\/dist\/face\/3001\/0\/53\/1195300_(0)\.jpg$/ then redirect(302, "https://raw.githubusercontent.com/Sign-in-or-Sign-up/MLBB/main/face/3001.jpg")
+request if ${url} ~= /^https:\/\/akmpicture\.youngjoygame\.com\/dist\/face\/3001\/0\/49\/1214900_(0)\.jpg$/ then redirect(302, "https://raw.githubusercontent.com/Sign-in-or-Sign-up/MLBB/main/face/3001.jpg")
+request if ${url} ~= /^https:\/\/akmpicture\.youngjoygame\.com\/dist\/face\/3001\/0\/44\/1264400_(0)\.jpg$/ then redirect(302, "https://raw.githubusercontent.com/Sign-in-or-Sign-up/MLBB/main/face/3001.jpg")
+request if ${url} ~= /^https:\/\/akmpicture\.youngjoygame\.com\/dist\/face\/3001\/0\/25\/1332500_(1)\.jpg$/ then redirect(302, "https://raw.githubusercontent.com/Sign-in-or-Sign-up/MLBB/main/face/3001.jpg")
+request if ${url} ~= /^https:\/\/akmpicture\.youngjoygame\.com\/dist\/face\/3001\/0\/38\/1383800_(0|1|2|11)\.jpg$/ then redirect(302, "https://raw.githubusercontent.com/Sign-in-or-Sign-up/MLBB/main/face/3001.jpg")
+request if ${url} ~= /^https:\/\/akmpicture\.youngjoygame\.com\/dist\/face\/3001\/0\/44\/1384400_(0)\.jpg$/ then redirect(302, "https://raw.githubusercontent.com/Sign-in-or-Sign-up/MLBB/main/face/3001.jpg")
+request if ${url} ~= /^https:\/\/akmpicture\.youngjoygame\.com\/dist\/face\/3001\/0\/47\/1384700_(3)\.jpg$/ then redirect(302, "https://raw.githubusercontent.com/Sign-in-or-Sign-up/MLBB/main/face/3001.jpg")
+request if ${url} ~= /^https:\/\/akmpicture\.youngjoygame\.com\/dist\/face\/3001\/0\/53\/1455300_(1)\.jpg$/ then redirect(302, "https://raw.githubusercontent.com/Sign-in-or-Sign-up/MLBB/main/face/3001.jpg")
+request if ${url} ~= /^https:\/\/akmpicture\.youngjoygame\.com\/dist\/face\/3001\/0\/56\/1485600_(1)\.jpg$/ then redirect(302, "https://raw.githubusercontent.com/Sign-in-or-Sign-up/MLBB/main/face/3001.jpg")
+request if ${url} ~= /^https:\/\/akmpicture\.youngjoygame\.com\/dist\/face\/3001\/0\/23\/1732300_(5)\.jpg$/ then redirect(302, "https://raw.githubusercontent.com/Sign-in-or-Sign-up/MLBB/main/face/3001.jpg")
+request if ${url} ~= /^https:\/\/akmpicture\.youngjoygame\.com\/dist\/face\/3001\/0\/41\/2164100_(0)\.jpg$/ then redirect(302, "https://raw.githubusercontent.com/Sign-in-or-Sign-up/MLBB/main/face/3001.jpg")
+request if ${url} ~= /^https:\/\/akmpicture\.youngjoygame\.com\/dist\/face\/3001\/0\/81\/2218100_(0)\.jpg$/ then redirect(302, "https://raw.githubusercontent.com/Sign-in-or-Sign-up/MLBB/main/face/3001.jpg")
+request if ${url} ~= /^https:\/\/akmpicture\.youngjoygame\.com\/dist\/face\/3001\/0\/13\/2401300_(0)\.jpg$/ then redirect(302, "https://raw.githubusercontent.com/Sign-in-or-Sign-up/MLBB/main/face/3001.jpg")
+request if ${url} ~= /^https:\/\/akmpicture\.youngjoygame\.com\/dist\/face\/3001\/0\/31\/3293100_(0)\.jpg$/ then redirect(302, "https://raw.githubusercontent.com/Sign-in-or-Sign-up/MLBB/main/face/3001.jpg")
