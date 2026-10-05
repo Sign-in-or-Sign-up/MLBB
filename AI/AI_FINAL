@@ -17,7 +17,7 @@ hostname = akmpicture.youngjoygame.com
 [Rewrite]
 
 #1001兜底
-request if ${url} ~= /^https:\/\/akmpicture\.youngjoygame\.com\/dist\/face\/1001\/(0|1)\/\d{1,2}\/\d{1,3}\d{2}(00|01)_\d{1,2}\.jpg$/ then redirect(302, "https://raw.githubusercontent.com/Sign-in-or-Sign-up/MLBB/main/face/1001_.jpg")
+request if ${url} ~= /^https:\/\/akmpicture\.youngjoygame\.com\/dist\/face\/1001\/(0|1)\/\d{1,2}\/(\d{1,2}|[12]\d{2})\d{2}(00|01)_\d{1,2}\.jpg$/ then redirect(302, "https://raw.githubusercontent.com/Sign-in-or-Sign-up/MLBB/main/face/1001_.jpg")
 
 #2001兜底
 request if ${url} ~= /^https:\/\/akmpicture\.youngjoygame\.com\/dist\/face\/2001\/0\/\d{1,2}\/[1-3]?\d{2}\d{2}00_\d{1,2}\.jpg$/ then redirect(302, "https://raw.githubusercontent.com/Sign-in-or-Sign-up/MLBB/main/face/2001_.jpg")
@@ -59,4 +59,14 @@ request if ${url} ~= /^https:\/\/akmpicture\.youngjoygame\.com\/dist\/face\/6001
 request if ${url} ~= /^https:\/\/akmpicture\.youngjoygame\.com\/dist\/face\/7001\/(0|1)\/\d{1,2}\/([89]\d{2}|1\d{3})\d{2}(00|01)_\d{1,2}\.jpg$/ then redirect(302, "https://raw.githubusercontent.com/Sign-in-or-Sign-up/MLBB/main/face/7001_.jpg")
 
 #疑似人机
+# 疑似人机 · x=0
+^https:\/\/akmpicture\.youngjoygame\.com\/dist\/face\/(1001|2001|3001|4001|5001|6001|7001|2204|2205|2206|2207|3005|3204|3205)\/0\/\d{1,2}\/([1-9]\d{0,2}|[1-3]\d{3})\d{2}00_\d{1,2}\.jpg$ - redirect(302, "https://raw.githubusercontent.com/Sign-in-or-Sign-up/MLBB/main/face/0000_.jpg")
 
+# 疑似人机 · x=1
+^https:\/\/akmpicture\.youngjoygame\.com\/dist\/face\/(1001|5001|6001|7001|2205|2206|2207|3005|3204|3205)\/1\/\d{1,2}\/([1-9]\d{0,2}|[1-3]\d{3})\d{2}01_\d{1,2}\.jpg$ - redirect(302, "https://raw.githubusercontent.com/Sign-in-or-Sign-up/MLBB/main/face/0000_.jpg")
+
+# 疑似人机 · x=10
+^https:\/\/akmpicture\.youngjoygame\.com\/dist\/face\/(6001|3005|3204|3205)\/10\/\d{1,2}\/([1-9]\d{0,2}|[1-3]\d{3})\d{2}10_\d{1,2}\.jpg$ - redirect(302, "https://raw.githubusercontent.com/Sign-in-or-Sign-up/MLBB/main/face/0000_.jpg")
+
+# 疑似人机 · x=11、12、13
+^https:\/\/akmpicture\.youngjoygame\.com\/dist\/face\/3005\/(11|12|13)\/\d{1,2}\/[1-9]\d{2}\d{2}(11|12|13)_\d{1,2}\.jpg$ - redirect(302, "https://raw.githubusercontent.com/Sign-in-or-Sign-up/MLBB/main/face/0000_.jpg")
