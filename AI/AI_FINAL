@@ -1,0 +1,62 @@
+#!name = Mobile Legends 电脑兜底
+#!desc = 通过识别某游戏中一批可疑的头像链接，对这些头像图片进行提示，用于辅助识别对局中的人机玩家。这些头像原本属于早年注册、疑似已弃游的帐号，官方可能将其随机挪用至人机头像框，因此头像与当前对局玩家未必对应。但该批链接特征明显，仍可作为区分真人与电脑的积极参考，并非绝对判定依据。
+#!openUrl = https://apps.apple.com/app/id1160056295
+#!author = Sign-in-or-sign-out
+#!homepage = 
+#!icon = 
+#!select = 
+#!input = 
+#!tag = 无尽对决
+#!date = 2026-10-05 08:00:00
+
+[Rule]
+
+[MITM]
+hostname = akmpicture.youngjoygame.com
+
+[Rewrite]
+
+#1001兜底
+request if ${url} ~= /^https:\/\/akmpicture\.youngjoygame\.com\/dist\/face\/1001\/(0|1)\/\d{1,2}\/\d{1,3}\d{2}(00|01)_\d{1,2}\.jpg$/ then redirect(302, "https://raw.githubusercontent.com/Sign-in-or-Sign-up/MLBB/main/face/1001_.jpg")
+
+#2001兜底
+request if ${url} ~= /^https:\/\/akmpicture\.youngjoygame\.com\/dist\/face\/2001\/0\/\d{1,2}\/[1-3]?\d{2}\d{2}00_\d{1,2}\.jpg$/ then redirect(302, "https://raw.githubusercontent.com/Sign-in-or-Sign-up/MLBB/main/face/2001_.jpg")
+
+#2204兜底
+request if ${url} ~= /^https:\/\/akmpicture\.youngjoygame\.com\/dist\/face\/2204\/0\/\d{1,2}\/[1-2]\d{3}\d{2}00_\d{1,2}\.jpg$/ then redirect(302, "https://raw.githubusercontent.com/Sign-in-or-Sign-up/MLBB/main/face/2204_.jpg")
+
+#2205兜底
+request if ${url} ~= /^https:\/\/akmpicture\.youngjoygame\.com\/dist\/face\/2205\/(0|1)\/\d{1,2}\/2\d{3}\d{2}(00|01)_\d{1,2}\.jpg$/ then redirect(302, "https://raw.githubusercontent.com/Sign-in-or-Sign-up/MLBB/main/face/2205_.jpg")
+
+#2206兜底
+request if ${url} ~= /^https:\/\/akmpicture\.youngjoygame\.com\/dist\/face\/2206\/(0|1)\/\d{1,2}\/[2-3]\d{3}\d{2}(00|01)_\d{1,2}\.jpg$/ then redirect(302, "https://raw.githubusercontent.com/Sign-in-or-Sign-up/MLBB/main/face/2206_.jpg")
+
+#2207兜底
+request if ${url} ~= /^https:\/\/akmpicture\.youngjoygame\.com\/dist\/face\/2207\/(0|1)\/\d{1,2}\/[2-3]\d{3}\d{2}(00|01)_\d{1,2}\.jpg$/ then redirect(302, "https://raw.githubusercontent.com/Sign-in-or-Sign-up/MLBB/main/face/2207_.jpg")
+
+#3001兜底
+request if ${url} ~= /^https:\/\/akmpicture\.youngjoygame\.com\/dist\/face\/3001\/0\/\d{1,2}\/[1-3]?\d{2}\d{2}00_\d{1,2}\.jpg$/ then redirect(302, "https://raw.githubusercontent.com/Sign-in-or-Sign-up/MLBB/main/face/3001_.jpg")
+
+#3005兜底
+request if ${url} ~= /^https:\/\/akmpicture\.youngjoygame\.com\/dist\/face\/3005\/(0|1|10|11|12|13)\/\d{1,2}\/[2-3]\d{2}\d{2}(00|01|10|11|12|13)_\d{1,2}\.jpg$/ then redirect(302, "https://raw.githubusercontent.com/Sign-in-or-Sign-up/MLBB/main/face/3005_.jpg")
+
+#3204兜底
+request if ${url} ~= /^https:\/\/akmpicture\.youngjoygame\.com\/dist\/face\/3204\/(0|1|10)\/\d{1,2}\/[1-2]\d{3}\d{2}(00|01|10)_\d{1,2}\.jpg$/ then redirect(302, "https://raw.githubusercontent.com/Sign-in-or-Sign-up/MLBB/main/face/3204_.jpg")
+
+#3205兜底
+request if ${url} ~= /^https:\/\/akmpicture\.youngjoygame\.com\/dist\/face\/3205\/(0|1|10)\/\d{1,2}\/[1-2]\d{3}\d{2}(00|01|10)_\d{1,2}\.jpg$/ then redirect(302, "https://raw.githubusercontent.com/Sign-in-or-Sign-up/MLBB/main/face/3205_.jpg")
+
+#4001兜底
+request if ${url} ~= /^https:\/\/akmpicture\.youngjoygame\.com\/dist\/face\/4001\/0\/\d{1,2}\/[12]\d{2}\d{2}00_\d{1,2}\.jpg$/ then redirect(302, "https://raw.githubusercontent.com/Sign-in-or-Sign-up/MLBB/main/face/4001_.jpg")
+
+#5001兜底
+request if ${url} ~= /^https:\/\/akmpicture\.youngjoygame\.com\/dist\/face\/5001\/(0|1)\/\d{1,2}\/[67]\d{2}\d{2}(00|01)_\d{1,2}\.jpg$/ then redirect(302, "https://raw.githubusercontent.com/Sign-in-or-Sign-up/MLBB/main/face/5001_.jpg")
+
+#6001兜底
+request if ${url} ~= /^https:\/\/akmpicture\.youngjoygame\.com\/dist\/face\/6001\/(0|1|10)\/\d{1,2}\/1\d{2}\d{2}(00|01|10)_\d{1,2}\.jpg$/ then redirect(302, "https://raw.githubusercontent.com/Sign-in-or-Sign-up/MLBB/main/face/6001_.jpg")
+
+#7001兜底
+request if ${url} ~= /^https:\/\/akmpicture\.youngjoygame\.com\/dist\/face\/7001\/(0|1)\/\d{1,2}\/([89]\d{2}|1\d{3})\d{2}(00|01)_\d{1,2}\.jpg$/ then redirect(302, "https://raw.githubusercontent.com/Sign-in-or-Sign-up/MLBB/main/face/7001_.jpg")
+
+#疑似人机
+
