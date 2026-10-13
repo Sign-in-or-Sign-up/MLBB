@@ -17,6 +17,7 @@ hostname = akmpicture.youngjoygame.com
 [Rewrite]
 
 ## 六位数 UUID ##
+request if ${url} ~= /^https:\/\/akmpicture\.youngjoygame\.com\/dist\/face\/2001\/0\/13\/641300_(0)\.jpg$/ then redirect(302, "https://raw.githubusercontent.com/Sign-in-or-Sign-up/MLBB/main/face/2001.jpg")
 request if ${url} ~= /^https:\/\/akmpicture\.youngjoygame\.com\/dist\/face\/2001\/0\/10\/651000_(1)\.jpg$/ then redirect(302, "https://raw.githubusercontent.com/Sign-in-or-Sign-up/MLBB/main/face/2001.jpg")
 request if ${url} ~= /^https:\/\/akmpicture\.youngjoygame\.com\/dist\/face\/2001\/0\/2\/660200_(0)\.jpg$/ then redirect(302, "https://raw.githubusercontent.com/Sign-in-or-Sign-up/MLBB/main/face/2001.jpg")
 request if ${url} ~= /^https:\/\/akmpicture\.youngjoygame\.com\/dist\/face\/2001\/0\/35\/703500_(0)\.jpg$/ then redirect(302, "https://raw.githubusercontent.com/Sign-in-or-Sign-up/MLBB/main/face/2001.jpg")
