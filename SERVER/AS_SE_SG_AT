@@ -7,16 +7,18 @@
 #!select = 
 #!input = 
 #!tag = 无尽对决东南亚
-#!date = 2024-11-02 19:00:00
+#!date = 2026-10-23 02:00:00
 
 [Rule]
 #IP登入检测:0
 
-#UDP30190PORT:0
+#UDP30190PORT
+#ID，印度尼西亚雅加达CDS
+AND,((IP-CIDR,47.237.208.233/32),(DEST-PORT,30190),(PROTOCOL,UDP)),REJECT
 
-#东南亚新加坡阿里云新加坡机房
+#东南亚新加坡阿里科技新加坡机房
 #47.236.129.0/24
-AND,((IP-CIDR,47.236.129.64/32,no-resolve),(OR,((DEST-PORT,5001-5004),(DEST-PORT,5501-5504)))),PROXY
+#AND,((IP-CIDR,47.236.129.64/32,no-resolve),(OR,((DEST-PORT,5001-5004),(DEST-PORT,5501-5504)))),PROXY
 
 [MITM]
 hostname = 
