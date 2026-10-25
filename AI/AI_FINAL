@@ -10,6 +10,8 @@
 #!date = 2026-10-05 08:00:00
 
 [Rule]
+URL-REGEX,"^https:\/\/raw\.githubusercontent\.com\/Sign-in-or-Sign-up\/MLBB\/main\/face\/\d{4}_\.jpg$",PROXY
+
 
 [MITM]
 hostname = akmpicture.youngjoygame.com
