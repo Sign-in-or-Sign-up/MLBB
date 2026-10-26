@@ -13,7 +13,7 @@
 URL-REGEX,"^https:\/\/raw\.githubusercontent\.com\/Sign-in-or-Sign-up\/MLBB\/main\/face\/\d{4}_\.jpg$",PROXY
 
 [MITM]
-hostname = akmpicture.youngjoygame.com
+hostname = akmpicture.youngjoygame.com,akmpicture.ml.mproject.skystone.games
 
 [Rewrite]
 
