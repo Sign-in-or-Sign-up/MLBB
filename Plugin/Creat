@@ -7,7 +7,7 @@
 #!select = 
 #!input = 
 #!tag = 无尽对决
-#!date = 2024-11-02 19:00:00
+#!date = 2026-10-26 00:00:00
 
 [Rule]
 
@@ -16,35 +16,31 @@ hostname = akmpicture.youngjoygame.com
 
 [Rewrite]
 
-#39开头的五位数服务器id
+# ========== 兜底：五/六位 → unknow.jpg ==========
+response if ${url} ~= /^https:\/\/akmpicture\.youngjoygame\.com\/dist\/face\/\d{5,6}\/\d{1,2}\/\d{1,2}\/(\d{6,10}_)?\d{1,3}(_new_[a-f0-9]{8}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{12})?\.jpg/ then response.body.mock_file("jpeg", "https://raw.githubusercontent.com/Sign-in-or-Sign-up/MLBB/main/face/unknow.jpg", 200)
+
+# ========== 39 开头五位数 ==========
 response if ${url} ~= /^https:\/\/akmpicture\.youngjoygame\.com\/dist\/face\/39\d{3}\/\d{1,2}\/\d{1,2}\/(\d{6,10}_)?\d{1,3}(_new_[a-f0-9]{8}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{12})?\.jpg/ then response.body.mock_file("jpeg", "https://raw.githubusercontent.com/Sign-in-or-Sign-up/MLBB/main/face/39.jpg", 200)
 
-#10以上开头的五位数服务器id
-response if ${url} ~= /^https:\/\/akmpicture\.youngjoygame\.com\/dist\/face\/1\d{4}\/\d{1,2}\/\d{1,2}\/(\d{6,10}_)?\d{1,3}(_new_[a-f0-9]{8}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{12})?\.jpg/ then response.body.mock_file("jpeg", "https://raw.githubusercontent.com/Sign-in-or-Sign-up/MLBB/main/face/10.jpg", 200)
+# ========== 10~19 开头五位数（逐条一一对应） ==========
+response if ${url} ~= /^https:\/\/akmpicture\.youngjoygame\.com\/dist\/face\/10\d{3}\/\d{1,2}\/\d{1,2}\/(\d{6,10}_)?\d{1,3}(_new_[a-f0-9]{8}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{12})?\.jpg/ then response.body.mock_file("jpeg", "https://raw.githubusercontent.com/Sign-in-or-Sign-up/MLBB/main/face/10.jpg", 200)
+response if ${url} ~= /^https:\/\/akmpicture\.youngjoygame\.com\/dist\/face\/11\d{3}\/\d{1,2}\/\d{1,2}\/(\d{6,10}_)?\d{1,3}(_new_[a-f0-9]{8}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{12})?\.jpg/ then response.body.mock_file("jpeg", "https://raw.githubusercontent.com/Sign-in-or-Sign-up/MLBB/main/face/11.jpg", 200)
+response if ${url} ~= /^https:\/\/akmpicture\.youngjoygame\.com\/dist\/face\/12\d{3}\/\d{1,2}\/\d{1,2}\/(\d{6,10}_)?\d{1,3}(_new_[a-f0-9]{8}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{12})?\.jpg/ then response.body.mock_file("jpeg", "https://raw.githubusercontent.com/Sign-in-or-Sign-up/MLBB/main/face/12.jpg", 200)
+response if ${url} ~= /^https:\/\/akmpicture\.youngjoygame\.com\/dist\/face\/13\d{3}\/\d{1,2}\/\d{1,2}\/(\d{6,10}_)?\d{1,3}(_new_[a-f0-9]{8}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{12})?\.jpg/ then response.body.mock_file("jpeg", "https://raw.githubusercontent.com/Sign-in-or-Sign-up/MLBB/main/face/13.jpg", 200)
+response if ${url} ~= /^https:\/\/akmpicture\.youngjoygame\.com\/dist\/face\/14\d{3}\/\d{1,2}\/\d{1,2}\/(\d{6,10}_)?\d{1,3}(_new_[a-f0-9]{8}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{12})?\.jpg/ then response.body.mock_file("jpeg", "https://raw.githubusercontent.com/Sign-in-or-Sign-up/MLBB/main/face/14.jpg", 200)
+response if ${url} ~= /^https:\/\/akmpicture\.youngjoygame\.com\/dist\/face\/15\d{3}\/\d{1,2}\/\d{1,2}\/(\d{6,10}_)?\d{1,3}(_new_[a-f0-9]{8}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{12})?\.jpg/ then response.body.mock_file("jpeg", "https://raw.githubusercontent.com/Sign-in-or-Sign-up/MLBB/main/face/15.jpg", 200)
+response if ${url} ~= /^https:\/\/akmpicture\.youngjoygame\.com\/dist\/face\/16\d{3}\/\d{1,2}\/\d{1,2}\/(\d{6,10}_)?\d{1,3}(_new_[a-f0-9]{8}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{12})?\.jpg/ then response.body.mock_file("jpeg", "https://raw.githubusercontent.com/Sign-in-or-Sign-up/MLBB/main/face/16.jpg", 200)
+response if ${url} ~= /^https:\/\/akmpicture\.youngjoygame\.com\/dist\/face\/17\d{3}\/\d{1,2}\/\d{1,2}\/(\d{6,10}_)?\d{1,3}(_new_[a-f0-9]{8}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{12})?\.jpg/ then response.body.mock_file("jpeg", "https://raw.githubusercontent.com/Sign-in-or-Sign-up/MLBB/main/face/17.jpg", 200)
+response if ${url} ~= /^https:\/\/akmpicture\.youngjoygame\.com\/dist\/face\/18\d{3}\/\d{1,2}\/\d{1,2}\/(\d{6,10}_)?\d{1,3}(_new_[a-f0-9]{8}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{12})?\.jpg/ then response.body.mock_file("jpeg", "https://raw.githubusercontent.com/Sign-in-or-Sign-up/MLBB/main/face/18.jpg", 200)
+response if ${url} ~= /^https:\/\/akmpicture\.youngjoygame\.com\/dist\/face\/19\d{3}\/\d{1,2}\/\d{1,2}\/(\d{6,10}_)?\d{1,3}(_new_[a-f0-9]{8}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{12})?\.jpg/ then response.body.mock_file("jpeg", "https://raw.githubusercontent.com/Sign-in-or-Sign-up/MLBB/main/face/19.jpg", 200)
 
-#1开头的四位数服务器id
+# ========== 1~9 开头四位数 ==========
 response if ${url} ~= /^https:\/\/akmpicture\.youngjoygame\.com\/dist\/face\/1\d{3}\/\d{1,2}\/\d{1,2}\/(\d{6,10}_)?\d{1,3}(_new_[a-f0-9]{8}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{12})?\.jpg/ then response.body.mock_file("jpeg", "https://raw.githubusercontent.com/Sign-in-or-Sign-up/MLBB/main/face/1.jpg", 200)
-
-#2开头的四位数服务器id
 response if ${url} ~= /^https:\/\/akmpicture\.youngjoygame\.com\/dist\/face\/2\d{3}\/\d{1,2}\/\d{1,2}\/(\d{6,10}_)?\d{1,3}(_new_[a-f0-9]{8}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{12})?\.jpg/ then response.body.mock_file("jpeg", "https://raw.githubusercontent.com/Sign-in-or-Sign-up/MLBB/main/face/2.jpg", 200)
-
-#3开头的四位数服务器id
 response if ${url} ~= /^https:\/\/akmpicture\.youngjoygame\.com\/dist\/face\/3\d{3}\/\d{1,2}\/\d{1,2}\/(\d{6,10}_)?\d{1,3}(_new_[a-f0-9]{8}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{12})?\.jpg/ then response.body.mock_file("jpeg", "https://raw.githubusercontent.com/Sign-in-or-Sign-up/MLBB/main/face/3.jpg", 200)
-
-#4开头的四位数服务器id
 response if ${url} ~= /^https:\/\/akmpicture\.youngjoygame\.com\/dist\/face\/4\d{3}\/\d{1,2}\/\d{1,2}\/(\d{6,10}_)?\d{1,3}(_new_[a-f0-9]{8}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{12})?\.jpg/ then response.body.mock_file("jpeg", "https://raw.githubusercontent.com/Sign-in-or-Sign-up/MLBB/main/face/4.jpg", 200)
-
-#5开头的四位数服务器id
 response if ${url} ~= /^https:\/\/akmpicture\.youngjoygame\.com\/dist\/face\/5\d{3}\/\d{1,2}\/\d{1,2}\/(\d{6,10}_)?\d{1,3}(_new_[a-f0-9]{8}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{12})?\.jpg/ then response.body.mock_file("jpeg", "https://raw.githubusercontent.com/Sign-in-or-Sign-up/MLBB/main/face/5.jpg", 200)
-
-#6开头的四位数服务器id
 response if ${url} ~= /^https:\/\/akmpicture\.youngjoygame\.com\/dist\/face\/6\d{3}\/\d{1,2}\/\d{1,2}\/(\d{6,10}_)?\d{1,3}(_new_[a-f0-9]{8}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{12})?\.jpg/ then response.body.mock_file("jpeg", "https://raw.githubusercontent.com/Sign-in-or-Sign-up/MLBB/main/face/6.jpg", 200)
-
-#7开头的四位数服务器id
 response if ${url} ~= /^https:\/\/akmpicture\.youngjoygame\.com\/dist\/face\/7\d{3}\/\d{1,2}\/\d{1,2}\/(\d{6,10}_)?\d{1,3}(_new_[a-f0-9]{8}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{12})?\.jpg/ then response.body.mock_file("jpeg", "https://raw.githubusercontent.com/Sign-in-or-Sign-up/MLBB/main/face/7.jpg", 200)
-
-#8开头的四位数服务器id
 response if ${url} ~= /^https:\/\/akmpicture\.youngjoygame\.com\/dist\/face\/8\d{3}\/\d{1,2}\/\d{1,2}\/(\d{6,10}_)?\d{1,3}(_new_[a-f0-9]{8}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{12})?\.jpg/ then response.body.mock_file("jpeg", "https://raw.githubusercontent.com/Sign-in-or-Sign-up/MLBB/main/face/8.jpg", 200)
-
-#9开头的四位数服务器id
 response if ${url} ~= /^https:\/\/akmpicture\.youngjoygame\.com\/dist\/face\/9\d{3}\/\d{1,2}\/\d{1,2}\/(\d{6,10}_)?\d{1,3}(_new_[a-f0-9]{8}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{12})?\.jpg/ then response.body.mock_file("jpeg", "https://raw.githubusercontent.com/Sign-in-or-Sign-up/MLBB/main/face/9.jpg", 200)
