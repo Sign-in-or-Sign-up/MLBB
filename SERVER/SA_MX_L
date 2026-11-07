@@ -14,6 +14,7 @@
 
 #UDP30190PORT:
 #MX，墨西哥克雷塔罗Liasail全球香港
+AND,((IP-CIDR,163.227.196.37/32),(DEST-PORT,30190),(PROTOCOL,UDP)),REJECT
 
 #南美墨西哥Liasail全球香港克雷塔罗机房
 #163.227.196.0/24，端口校对
